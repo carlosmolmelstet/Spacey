@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Happy" src=".github/h1.png" width="50%">
+    <img alt="Spacey" src=".github/logo-light.svg" width="50%">
 </h1>
 
 <p align="center">
