@@ -1,0 +1,235 @@
+@import './_variables.scss';
+
+// Mixin
+
+@mixin font-display {
+	font-size: 62px;
+	font-weight: 800;
+	line-height: 96px;
+	letter-spacing: 1;
+}
+
+@mixin font-heading-h1 {
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 48px;
+	letter-spacing: 1;
+}
+
+@mixin font-heading-h2 {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 32px;
+	letter-spacing: 1;
+}
+
+@mixin font-heading-h3 {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 24px;
+	letter-spacing: 1;
+}
+
+@mixin font-body-18 {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 32px;
+	letter-spacing: 1;
+}
+
+
+@mixin font-body-16 {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	letter-spacing: 1;
+}
+
+@mixin font-body-14 {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: 1;
+}
+
+@mixin font-caption-16 {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 1;
+}
+
+@mixin font-caption-14 {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 1;
+}
+
+@mixin flex($justify-content, $align-items, $flex-direction: row) {
+	display: flex;
+	flex-direction: $flex-direction;
+	justify-content: $justify-content;
+	align-items: $align-items;
+}
+
+//Geral Class
+
+.spacey-btn {
+	font-size: 18px;
+	color: $color-white;
+	font-weight: 700;
+	text-align: center;
+	padding: 16px 48px;
+	background: $color-mars;
+	border-radius: 6px;
+	border: none;
+	transition: 0.4s;
+
+	&:hover {
+		background: $color-mars-light;
+		cursor: pointer;
+	}
+}
+
+.spacey-input {
+	background: none;
+	border-radius: 6px;
+	border: 1px solid $color-gray-5;
+	padding: 8px;
+	transition: 0.4s;
+	font-size: 24px;
+	color: $color-gray-5;
+}
+
+.spacey-checkbox {
+	display: block;
+	margin-bottom: 40px;
+
+	input {
+		padding: 0;
+		height: initial;
+		width: initial;
+		margin-bottom: 0;
+		display: none;
+		cursor: pointer;
+
+	
+	}
+	
+	label {
+		position: relative;
+		cursor: pointer;
+		color: $color-gray-4;
+		transform: 0.4s;
+
+
+		&:hover {
+			color: $color-mars-light;
+			&:before {
+				border: 2px solid $color-mars-light;
+			}
+		}
+		
+	}
+	
+	label:before {
+		content:'';
+		background-color: transparent;
+		border: 2px solid $color-gray-4;
+		border-radius: 6px;
+		padding: 12px;
+		display: inline-block;
+		position: relative;
+		vertical-align: middle;
+		cursor: pointer;
+		margin-right: 12px;
+	}
+
+	input:checked + label:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 2px;
+		left: 10px;
+		width: 6px;
+		height: 14px;
+		border: solid $color-white;
+		border-width: 0 2px 2px 0;
+		transform: rotate(45deg);
+		color: $color-white;
+	}
+
+	input:checked + label {
+		color: $color-white;
+
+		&:before {
+			border: 2px solid $color-white;
+		}
+
+	}
+}
+
+//Animations 
+
+.bounce-in-right {
+    animation: bounce-in-right 2s ease;
+}
+
+@keyframes bounce-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(2000px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateX(-30px);
+    }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+
+.bounce-in-down {
+    animation: bounce-in-down 2s ease;
+}
+
+@keyframes bounce-in-down {
+    0% {
+      opacity: 0;
+      transform: translateY(2000px);
+    }
+    100% { transform: translateY(0); }
+}
+  
+
+.bounce-animation:hover {
+		animation: bounce-animation 2s ease infinite;
+}
+
+@keyframes bounce-animation {
+	  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	  40% {transform: translateY(-30px);}
+	  60% {transform: translateY(-15px);}
+}
+
+.bounce-in-right-2 {
+    animation: bounce-in-right-2 2s ease;
+}
+
+@keyframes bounce-in-right-2 {
+    0% {
+      opacity: 0;
+      transform: translateX(500px);
+    }
+    100% { transform: translateX(0);     ;
+	}
+}
+
+@keyframes animatedBackground {
+	from {
+	  background-position: 0 0;
+	}
+	to {
+	  background-position: 100% 100%;
+	}
+  }
