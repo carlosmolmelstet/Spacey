@@ -22,7 +22,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - SCSS
 
 ## 🖌 Layout
--  
+
 - UI design feito por [Jonas Milan](https://www.instagram.com/jonasmilancc/)
 
 [Acessar Layout no Figma](https://www.figma.com/community/file/986447430009792279)
